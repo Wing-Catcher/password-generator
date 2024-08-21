@@ -1,0 +1,197 @@
+body {
+    background-color: rgb(37, 37, 37);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: aliceblue;
+    background-image: url(/assets/yellow.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+nav{
+    background-color: aliceblue;
+    color: rgb(37, 37, 37);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0px 0px 20px 20px;
+    padding: 0px 90px;
+    box-shadow: black 0px 0px 10px;
+
+    .nav-items{
+        align-items: center;
+        display: flex;
+        gap: 5px;
+        img{
+            width: 60px;
+            border-radius: 10px;
+        }
+        #navline{
+            height: 50px;
+            width: 3px;
+            background-color: rgb(255, 196, 0);
+        }
+    }
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    background-color: #D3CDC7;
+    border-radius: 5px;
+    border: none;
+    transform: scale(0.9);
+    transition: all 0.2s;
+}
+
+main{
+    display: flex;
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+    flex-wrap: wrap;
+    padding: 30px 90px 30px 90px;
+}
+#container{
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    min-width: 300px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: black 0px 0px 10px;
+    animation: scaleFade 1.5s 1s forwards;
+    opacity: 0;
+
+    #options{
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 5px;
+        width: 80%;
+        border-radius: 5px;
+        color: black;
+        margin: auto;
+    }
+
+    #result{
+        width: 80%;
+        height: 60px;
+        border-radius: 10px;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        transition: all 0.2s;
+        color: aliceblue;
+        font-weight: 700;
+    }
+    #result:focus{
+        background-color: aliceblue;
+        color: black;
+    }
+
+    h1{
+        line-height: 20px;
+    }
+
+    #history{
+        resize: none;
+        width: 100%;
+        height: 150px;  
+        border-radius: 10px;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        transition: all 0.2s;
+        color: aliceblue;
+        font-weight: 700;
+    }
+
+    #copy{
+        display: none;
+    }
+
+    .grad_yellow:hover {
+        background: rgb(255, 223, 0); /* Fallback for older browsers */
+        background: linear-gradient(90deg, rgba(255, 223, 0, 1) 0%, rgba(255, 255, 102, 1) 100%);
+        color: rgb(41, 41, 41);
+        width: 150px;
+        transform: scale(1);
+        border-radius: 100px;
+        font-weight: 700;
+    }
+    
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+    align-items: center;
+    gap: 50px;
+    padding: 10px 90px;
+    color: black;
+
+    #buttons{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        font-size: 1.5em;
+
+        
+    }
+    .grad_black:hover {
+        background: rgb(40, 40, 40);
+        background: linear-gradient(90deg, rgba(40, 40, 40, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        color: aliceblue;
+        width: 150px;
+        transform: scale(1);
+        border-radius: 100px;
+    }
+}
+
+@keyframes scaleFade {
+    0% {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+@keyframes marioBump {
+    0% { transform: translateY(0); }
+    20% { transform: translateY(-5px); }
+    40% { transform: translateY(-15px); }
+    60% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.bump {
+    animation: marioBump 0.15s ease-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out; /* Adjust timing for desired effect */
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="assets/password icon.jpeg" alt="">
+            <div id="navline"></div>
+            <h1>Simple Password Generator</h1>
+        </div>
+        <div class="nav-items">
+            <p>Created by: WingCatcher</p>
+        </div>
+    </nav>
+    <main>
+        <div id="container">
+            <h1>Hello World</h1>
+            <p>Most user mistake before get hacked are using a <span style="background-color: rgb(255, 232, 127); color: black;"><b>weak password.</b></span></p>
+
+            <div id="options">
+                <input type="checkbox" name="option" id="number">
+                <label for="number">Use Numbers</label>
+                <input type="checkbox" name="option" id="symbol">
+                <label for="symbol">Use Symbols</label>
+                <input type="checkbox" name="option" id="uppercase">
+                <label for="uppercase">Use Uppercases</label>
+                <input type="checkbox" name="option" id="lowercase">
+                <label for="lowercase">Use Lowercases</label>
+            </div><br>
+            <div>
+                <label for="length">Password Length:</label>
+                <input type="number" id="length" min="1" value="1">
+            </div><br>
+
+
+            <input type="text" name="" id="result" placeholder="The password goes here."><br><br>
+            <button id="generate" onclick="generate()" class="grad_yellow">Generate!</button>
+            <button id="copy" onclick="copyToClipboard()" class="grad_yellow">Copy</button>
+        </div>
+        <br>
+        <div id="container">
+            <h1>Generated Passwords</h1>
+            <textarea id="history" readonly ></textarea><br><br>
+            <button onclick="clearHistory()" class="grad_yellow">Clear History</button>
+        </div>
+        <br>
+        <div id="container">
+            <h1>Why Strong Passwords?</h1>
+            <hr>
+            <p>
+                Strong passwords are essential for protecting your online accounts from cyber threats. A weak password can be easily cracked by hackers using automated tools, exposing your personal and financial information. To safeguard your data, it's crucial to use a password that includes a mix of letters, numbers, and special characters.
+
+By creating strong, unique passwords for each of your accounts, you significantly reduce the risk of unauthorized access. This simple step is one of the most effective ways to keep your online presence secure.
+
+Source: National Institute of Standards and Technology (NIST)
+            </p>
+        </div>
+    </main>
+    <footer>
+        <section id="title">
+            <p style="font-size: 1.2 em; line-height: 5px;"><b>Password Generator Project</b></p>
+            <p style="font-size: 0.8em;">Made by: Raffy / wing | Background: wallup.net</p>
+        </section>
+        <section id="buttons">
+            <a href="" target="_blank">
+                <button class="grad_black">Source Code</button>
+            </a>
+        </section>
+    </footer>
+    <script src="/script/script.js"></script>
+</body>
+</html>
