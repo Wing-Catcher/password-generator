@@ -1,5 +1,3 @@
-window.alert("Not yet developed for mobile phones.")
-
 const lowercaseChars = "qwertyuiopasdfghjklzxcvbnm";
 const uppercaseChars = "QWERTYUIOPASDFGHJKLZXCVBNM";
 const symbolChars = "`~!@#$%^&*()_+{};:,<.>";
@@ -32,10 +30,6 @@ function generatePassword() {
     else{
         return password
     }
-}
-
-function check() {
-    console.log(`From Check: ${generatePassword()}`);
 }
 
 function generate(){

@@ -55,7 +55,7 @@ main{
 #container{
     background-color: rgba(0, 0, 0, 0.25);
     width: 100%;
-    min-width: 300px;
+    min-width: 200px;
     padding: 30px;
     border-radius: 20px;
     text-align: center;
@@ -67,14 +67,20 @@ main{
     #options{
         background-color: rgba(255, 255, 255, 0.8);
         padding: 5px;
-        width: 80%;
+        box-sizing: border-box;
         border-radius: 5px;
         color: black;
+        display: flex;
+        flex-wrap: wrap;
         margin: auto;
+        justify-content: space-between;
+        width: auto; /* Ensure width adjusts to content */
+        max-width: 600px; /* Prevent overflow beyond the parent */
     }
 
     #result{
-        width: 80%;
+        width: 100%;
+        max-width: 600px;
         height: 60px;
         border-radius: 10px;
         border: none;
@@ -89,9 +95,6 @@ main{
         color: black;
     }
 
-    h1{
-        line-height: 20px;
-    }
 
     #history{
         resize: none;
@@ -194,4 +197,39 @@ footer {
 
 .shake {
     animation: shake 0.3s ease-in-out; /* Adjust timing for desired effect */
+}
+
+@media only screen and (max-width: 700px) {
+    main{
+        padding: 30px;
+    }
+    footer{
+        padding: 10px 30px;
+        .grad_black:hover{
+            width: 100px;
+        }
+    }
+    nav{
+        padding: 0px 30px;
+        .nav-items{
+            h1{
+                font-size: 0.85em;
+            }
+            p{
+                font-size: 0.8em;
+                text-align: right;
+            }
+        }
+    }
+    #container{
+        text-align: center;
+
+        #options{
+            padding: 10px;
+        }
+
+        .grad_yellow:hover{
+            width: 100px;
+        }
+    }
 }
