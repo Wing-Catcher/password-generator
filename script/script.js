@@ -24,7 +24,7 @@ function generatePassword() {
         password += allowedChars[random];
     }
 
-    if (allowedChars.length === 0 || length == 0){
+    if (allowedChars.length === 0 || (length == 0 || isNaN(length))){
         return "Invalid Input"
     }
     else{

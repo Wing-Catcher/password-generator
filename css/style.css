@@ -31,6 +31,17 @@ nav{
             width: 3px;
             background-color: rgb(255, 196, 0);
         }
+
+        h1{
+            transition: all 0.2s;
+        }
+        h1:hover{
+            background: linear-gradient(90deg, rgba(255, 223, 0, 1) 0%, rgba(255, 255, 102, 1) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 3px 3px 10px rgba(255, 217, 0, 0.2);
+        }
     }
 }
 
@@ -113,8 +124,8 @@ main{
         display: none;
     }
 
-    .grad_yellow:hover {
-        background: rgb(255, 223, 0); /* Fallback for older browsers */
+    .grad_yellow:active {
+        background: rgb(255, 223, 0);
         background: linear-gradient(90deg, rgba(255, 223, 0, 1) 0%, rgba(255, 255, 102, 1) 100%);
         color: rgb(41, 41, 41);
         width: 150px;
@@ -122,7 +133,9 @@ main{
         border-radius: 100px;
         font-weight: 700;
     }
-    
+    .grad_yellow:hover{
+        background-color: rgb(172, 172, 172);
+    }
 }
 
 footer {
@@ -142,7 +155,7 @@ footer {
 
         
     }
-    .grad_black:hover {
+    .grad_black:active {
         background: rgb(40, 40, 40);
         background: linear-gradient(90deg, rgba(40, 40, 40, 1) 0%, rgba(0, 0, 0, 1) 100%);
         color: aliceblue;
@@ -150,6 +163,10 @@ footer {
         transform: scale(1);
         border-radius: 100px;
     }
+    .grad_black:hover{
+        background-color: rgb(172, 172, 172);
+    }
+
 }
 
 @keyframes scaleFade {
@@ -205,7 +222,7 @@ footer {
     }
     footer{
         padding: 10px 30px;
-        .grad_black:hover{
+        .grad_black:active{
             width: 100px;
         }
     }
@@ -230,7 +247,7 @@ footer {
             padding: 10px;
         }
 
-        .grad_yellow:hover{
+        .grad_yellow:active{
             width: 100px;
         }
     }
